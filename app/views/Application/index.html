@@ -1,4 +1,22 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:'Det e boka mi!!' /}
 
-#{welcome /}
+<pre>
+	
+		      .__=\__                  .__==__,
+	            jf'      ~~=\,         _=/~'      `\,
+	        ._jZ'            `\q,   /=~             `\__
+	       j5(/                 `\./                  V\\, Boka di.
+	     .Z))' _____              |             .____, \)/\
+	    j5(K=~~     ~~~~\=_,      |      _/=~~~~'    `~~+K\\,
+	  .Z)\/                `~=L   |  _=/~                 t\ZL
+	 j5(_/.__/===========\__   ~q |j/   .__============___/\J(N,
+	4L#XXXL_________________XGm, \P  .mXL_________________JXXXW8L
+	~~~~~~~~~~~~~~~~~~~~~~~~~YKWmmWmmW@~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+</pre>
+#{form id:'loginForm', action:@AuthorController.create()}
+Registrer deg:<br/> <input type="text" name="name" value="Ditt navn" onfocus="if(this.value == 'Ditt navn') { this.value = ''; }"  size="47"/><br/><input type="text" name="email" value="E-post" onfocus="if(this.value == 'E-post') { this.value = ''; }" /> <input type="password" name="password" value="password" onfocus="if(this.value == 'password') { this.value = ''; }" /><input type="submit" value="Go"/>
+#{/form}
+<br/><br/>
+Har du allerede en bruker? <a href="/login">Logg inn</a>
