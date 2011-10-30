@@ -6,7 +6,7 @@ import javax.persistence.*;
 import play.db.jpa.*;
 import play.data.validation.*;
 
-@Entity(name="authors")
+@Entity(name="author")
 public class Author extends Model {
 	
 	public String name;

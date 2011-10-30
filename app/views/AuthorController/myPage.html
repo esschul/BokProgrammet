@@ -1,1 +1,9 @@
-Velkommen ${author?.name}
+<h2>Min side - ${author?.name}(${author?.email})</h2>
+<h4>Mine bøker (${author?.books.size()})</h4>
+#{list items:author?.books, as:'book'}
+<h3>${book.title}</h3><br>${book.synopsis}<br/>
+<button>Jobb med denne.</button>
+#{/list}
+<br/><br/>
+<a href="/book/create?authorId=${author.id}">Ny bok</a>
+<h4>Min profil</h4>

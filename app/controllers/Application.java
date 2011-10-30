@@ -10,7 +10,8 @@ import models.*;
 public class Application extends Controller {
 
     public static void index() {
-        render();
+		List<Book> books = Book.all().fetch(30);
+   		render(books);
     }
 
 }

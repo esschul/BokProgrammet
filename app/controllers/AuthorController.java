@@ -7,6 +7,7 @@ import java.util.*;
 
 import models.*;
 
+@With(Secure.class)
 public class AuthorController extends Controller {
 
 	public static void create(String email, String password, String name) {
