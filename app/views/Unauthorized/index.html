@@ -21,11 +21,14 @@
 #{list items:books, as:'book'}
 <hr>
 <h3>${book.title}</h3><br>${book.synopsis}
-<br/><br/><button>Les boken</button><button>Bidra</button><button>Omtaler (2)</button>
+<br/><br/>
+<button onclick="document.location='/book/view?bookId=${book.id}'">Les boken</button>
+<button>Bidra</button><button>Omtaler (2)</button>
 #{/list}
 <br/>
+<br/>
 <hr>
-#{form id:'loginForm', action:@AuthorController.create()}
+#{form id:'loginForm', action:@Unauthorized.register()}
 Registrer deg:<br/> <input type="text" name="name" value="Ditt navn" onfocus="if(this.value == 'Ditt navn') { this.value = ''; }"  size="47"/><br/><input type="text" name="email" value="E-post" onfocus="if(this.value == 'E-post') { this.value = ''; }" /> <input type="password" name="password" value="password" onfocus="if(this.value == 'password') { this.value = ''; }" /><input type="submit" value="Go"/>
 #{/form}
 <br/>

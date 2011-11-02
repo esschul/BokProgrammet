@@ -3,7 +3,7 @@ package controllers;
 import models.*;
 import play.Logger;
 
-public class SecurityController extends Secure.Security {
+public class Security extends Secure.Security {
 	
 	private static Long authorId = null;
 
@@ -13,11 +13,11 @@ public class SecurityController extends Secure.Security {
     }
 
     static void onDisconnected() {
-        Application.index();
+        Unauthorized.index();
     }
 
     static void onAuthenticated() {
-        AuthorController.myPage(authorId);
+        Authorized.myPage();
     }
 
 }

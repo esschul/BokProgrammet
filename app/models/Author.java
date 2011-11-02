@@ -28,7 +28,10 @@ public class Author extends Model {
 	}
 
 	public static Author connect(String email, String password) {
-	        return find("byEmailAndPassword", email, password).first();
+		List<Author> authors = find("byEmailAndPassword", email, password).fetch();
+		 System.out.println(authors.get(0)); 
+		 System.out.println("Found : " + authors.size());
+	     return find("byEmailAndPassword", email, password).first();
 	}
 
 

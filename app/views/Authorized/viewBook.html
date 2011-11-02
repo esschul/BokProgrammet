@@ -1,0 +1,9 @@
+<h2>${book.title}</h2>
+en bok av
+#{list items:book?.authors, as:'author'}
+<b>${author.name}</b>
+#{/list}
+<br/><br/>
+${book.synopsis}
+<br/><br/>
+<a href="/author/mypage">Tilbake til min side</a>

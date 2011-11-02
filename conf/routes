@@ -3,10 +3,11 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
-GET     /book/create		                    BookController.create
-GET     /book/view			                    BookController.view
-GET     /author/mypage		                   	AuthorController.myPage
+GET     /                                       Unauthorized.index
+GET     /author/register		                Unauthorized.createAuthor
+GET     /book/create		                    Authorized.createBook
+GET     /book/view			                    Authorized.viewBook
+GET     /author/mypage		                   	Authorized.myPage
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

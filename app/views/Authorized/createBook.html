@@ -1,6 +1,5 @@
 <h2>Ny bok</h2>
-#{form id:'bookForm', action:@BookController.save()}
-<input type="hidden" name="authorId" value="${authorId}">
+#{form id:'bookForm', action:@Authorized.saveBook()}
 Arbeidstittel<br/><input type="text" size="138" name="title"/><br/>
 Førsteutkast til idé<br/><textarea name="synopsis" cols="100" rows="20"></textarea><br/>
 <br/>
